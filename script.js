@@ -664,9 +664,12 @@ async function main() {
   });
 
   // Home icon click = home
-  document.querySelector(".homenav img").addEventListener("click", () => {
-    showHome();
-  });
+  const homeIcon = document.querySelector(".homenav img");
+  if (homeIcon) {
+    homeIcon.addEventListener("click", () => {
+      showHome();
+    });
+  }
 
   let homeContent = document.querySelector(".right").innerHTML;
   function showHome() {

@@ -81,6 +81,11 @@ body {
     padding-top: 2px;
 }
 
+/* Lift the navbar logo slightly to avoid bottom clipping */
+.img img {
+    transform: none; /* Only adjust on mobile */
+}
+
 .search {
     padding-left: 10px;
 
@@ -189,6 +194,12 @@ input {
 
 .playhead {
     padding-left: 40px;
+}
+
+/* Make section headings larger for better hierarchy */
+.playhead h1 {
+    font-size: 40px;
+    line-height: 1.2;
 }
 
 .card {
@@ -620,19 +631,21 @@ input {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 10px 12px;
     border-radius: 8px;
     transition: all 0.3s ease;
     min-width: 60px;
+    color: #9e9e9e; /* inactive gray similar to Spotify */
 }
 
 .taskbar-tab.active {
-    background: #1DB954;
-    color: white;
+    background: transparent; /* no background for active */
+    color: #ffffff; /* active white */
 }
 
 .taskbar-tab:hover {
-    background: #2a2a2a;
+    background: transparent; /* keep clean look */
+    color: #ffffff; /* brighten on hover */
 }
 
 .taskbar-tab:hover .tab-icon svg {
@@ -645,20 +658,25 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    width: 30px;   /* expand container to fit bigger svg */
+    height: 30px;
 }
 
 .tab-icon svg {
-    width: 20px;
-    height: 20px;
+    width: 30px;  /* bigger icons as requested */
+    height: 30px;
     transition: all 0.3s ease;
 }
 
+/* Show labels under icons in the taskbar */
 .tab-label {
+    display: block;
+    margin-top: 3px;
     font-size: 10px;
     font-weight: 500;
     text-align: center;
+    line-height: 1;
+    color: inherit; /* follow active/inactive color */
 }
 
 /* Mobile Content Areas */
@@ -1196,7 +1214,7 @@ input {
     /* Keep only logo in navbar - left aligned */
     .nav {
         width: 100vw;
-        height: 60px;
+        height: 70px; /* increased navbar height */
         padding: 10px;
         justify-content: flex-start;
         display: flex;
@@ -1217,6 +1235,7 @@ input {
         width: auto;
         max-width: 200px;
         object-fit: contain;
+        transform: translateY(-15px); /* nudge up more to prevent cutting */
     }
     
     /* Show the sidebar close cross only on mobile */
@@ -1401,7 +1420,7 @@ input {
     }
     
     .playhead h1 {
-        font-size: 24px;
+        font-size: 28px; /* larger on mobile for prominence */
     }
     
     /* Playbar adjustments */
@@ -1431,6 +1450,46 @@ input {
     .now-playing-controls img {
         height: 40px;
         margin: 0 10px;
+    }
+}
+
+/* Small fixes within the existing Mobile (<=768px) media query to prevent double scrollbars */
+@media (max-width: 768px) {
+    /* Prevent body from creating its own scrollbar on mobile */
+    html, body {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /* We will manage spacing with the mobile content height instead */
+    body {
+        padding-bottom: 0 !important;
+    }
+
+    /* Make only the mobile content area scrollable and account for navbar + playbar + taskbar */
+    .mobile-content {
+        top: 70px; /* navbar height */
+        height: calc(100vh - 70px - 130px); /* full height minus navbar (70) and both bars (130) */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px; /* avoid clipping shadows */
+    }
+
+    /* Prevent nested scroll inside tab-content to avoid double scrollbars */
+    .tab-content {
+        height: auto;
+        min-height: unset;
+        overflow: visible; /* let parent .mobile-content own the scroll */
+    }
+
+    /* Hide scrollbars while keeping scroll behavior */
+    .mobile-content, .tab-content {
+        scrollbar-width: none;       /* Firefox */
+        -ms-overflow-style: none;    /* IE/Edge */
+    }
+    .mobile-content::-webkit-scrollbar,
+    .tab-content::-webkit-scrollbar {
+        display: none;               /* Chrome/Safari */
     }
 }
 
@@ -1469,7 +1528,7 @@ input {
     }
     
     .playhead h1 {
-        font-size: 20px;
+        font-size: 24px; /* small mobile still clear and larger */
     }
     
     .playbar {
