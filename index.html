@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurTaal - Suron ka Safar, Taal ke Saath</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+
+<body>
+    <div class="navbar nav">
+        <!-- Hamburger menu for mobile -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+        
+        <div class="img">
+            <img src="erasebg-transformed.png" height="50px">
+        </div>
+        <div class="homenav">
+            <img src="image-removebg-preview.png" height="60%">
+        </div>
+        <div class="search">
+            <input type="text" name="search" placeholder="What do you want to play?">
+        </div>
+
+        <div class="sign">
+            <div class="signup">Sign Up</div>
+            <div class="login">
+                <button>Log in</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="conatianer flex">
+        <div class="left border" id="left-sidebar">
+            <!-- Close button for mobile -->
+            <div class="close-sidebar" id="close-sidebar">
+                <span>&times;</span>
+            </div>
+            
+            <div class="home">
+                <div class="addbut">
+                    <img src="add.png" width="10%">
+                    <p>New Playlist</p>
+                </div>
+            </div>
+
+            <div class="addplaylists">
+                <ul>
+                    <li><img src="https://www.gstatic.com/youtube/media/ytm/images/pbg/liked-music-@1200.png"
+                            height="50px">
+                        <p1>Liked Songs <br>
+                            <p2>Playlist</p2></br>
+                        </p1>
+                    </li>
+                    <li><img src="popculture.jpg" height="50px">
+                        <p1>P-POP CULTURE <br>
+                            <p2>Playlist</p2></br>
+                        </p1>
+                    </li>
+                    <li><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9ae67d801ce4b277bc9a0160"
+                            height="50px">
+                        <p1>Ishq aur Tanhai<br>
+                            <p2>Playlist</p2></br>
+                        </p1>
+                    </li>
+                    <li><img src="80's.jpg" height="50px">
+                        <p1>80's-90's<br>
+                            <p2>Playlist</p2></br>
+                        </p1>
+                    </li>
+                    <li><img src="https://i.scdn.co/image/ab67706f00000002d5d2003959d642758be307d6" height="50px">
+                        <p1>Punjabi Pump<br>
+                            <p2>Playlist</p2></br>
+                        </p1>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right border">
+            <div class="playlist">
+                <div class="playhead">
+                    <h1>Top Weekly Album's</h1>
+                </div>
+
+                <div class="cardcontainer">
+                    <div class="card">
+                        <div class="playbut">
+                            <img src="playbutt.png" height="50px">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02a7e251b543c77a6ed356dfbe">
+                        <h3>Saiyaara</h3>
+                        <p>Album</p>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="playbut">
+                            <img src="playbutt.png" height="50px">
+                        </div>
+                        <img src="glory.jpg">
+                        <h3>The Glory</h3>
+                        <p>Album</p>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="playbut">
+                            <img src="playbutt.png" height="50px">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e028fa95e3e74799cb0b2a1fb57">
+                        <h3>51 Glorious Days</h3>
+                        <p>Album</p>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="playbut">
+                            <img src="playbutt.png" height="50px">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f00000002902ab96d7cae873f5c253fff">
+                        <h3>Haryanvi Workout</h3>
+                        <p>Album</p>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="playbut">
+                            <img src="playbutt.png" height="50px">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f0000000203b72ae3caf435bd1f95fbd5">
+                        <h3>Bollywood & Chill</h3>
+                        <p>Album</p>
+
+                    </div>
+
+                </div>
+
+                <div class="playhead">
+                    <h1>New Releases</h1>
+                </div>
+
+                <div class="cardcontainer">
+                    <div class="card">
+                        <div class="playbut">
+                            <img src="playbutt.png" height="50px">
+                        </div>
+                        <img
+                            src="https://lh3.googleusercontent.com/LEdbfSC9xh9S-N-uRQ7iJPlJQLi9OUyOUX4oJ0sAiFuOf4g01B94FD9NzPdDkn5hpFrms2HmrpKPJle5=w544-h544-l90-rj">
+                        <h3>Haseen</h3>
+                        <p>Talwinder</p>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="playbut">
+                            <img src="playbutt.png" height="50px">
+                        </div>
+                        <img src="https://pagalnew.com/coverimages/bijuria-sunny-sanskari-ki-tulsi-kumari-500-500.jpg">
+                        <h3>Bijuria</h3>
+                        <p>Sonu Nigam, Asees Kaur</p>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="playbut">
+                            <img src="playbutt.png" height="50px">
+                        </div>
+                        <img
+                            src="https://lh3.googleusercontent.com/p2-NRHoGI6J_-_tCSCFOt9N-PodFYHrTwWf2xKax1dEa35gsfhvcLZwUxNflxOROjgW9_6Sed9Va8o8bCg=w544-h544-l90-rj">
+                        <h3>Panwadi</h3>
+                        <p>Khesari Lal Yadav</p>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="playbut">
+                            <img src="playbutt.png" height="50px">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02203e6495a78184970ab274ac">
+                        <h3>Azul</h3>
+                        <p>Guru Randhawa</p>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="playbut">
+                            <img src="playbutt.png" height="50px">
+                        </div>
+                        <img src="https://pagalnew.com/coverimages/perfect-sunny-sanskari-ki-tulsi-kumari-500-500.jpg">
+                        <h3>Perfect</h3>
+                        <p>Guru Randhawa</p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Desktop Playbar -->
+    <div class="playbar">
+        <div class="songbut">
+            <img src="prev.png" height="10px">
+            <img src="play.png">
+            <img src="next.png">
+        </div>
+    </div>
+
+    <!-- Mobile Playbar -->
+    <div class="mobile-playbar" id="mobile-playbar">
+        <div class="song-info">
+            <div class="song-cover" id="mobile-song-cover">
+                <img src="" alt="Song Cover" id="mobile-song-cover-img" style="display: none;">
+            </div>
+            <div class="song-details">
+                <div class="song-title" id="mobile-song-title">No song playing</div>
+                <div class="song-artist" id="mobile-song-artist">SurTaal</div>
+            </div>
+        </div>
+        <div class="play-controls">
+            <button class="control-btn" id="mobile-prev-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                </svg>
+            </button>
+            <button class="play-btn" id="mobile-play-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </button>
+            <button class="control-btn" id="mobile-next-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Taskbar -->
+    <div class="mobile-taskbar" id="mobile-taskbar">
+        <div class="taskbar-tab active" data-tab="home">
+            <div class="tab-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+            </div>
+            <div class="tab-label">Home</div>
+        </div>
+        <div class="taskbar-tab" data-tab="search">
+            <div class="tab-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+            </div>
+            <div class="tab-label">Search</div>
+        </div>
+        <div class="taskbar-tab" data-tab="library">
+            <div class="tab-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
+                </svg>
+            </div>
+            <div class="tab-label">Library</div>
+        </div>
+        <div class="taskbar-tab" data-tab="login">
+            <div class="tab-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+            </div>
+            <div class="tab-label">Login</div>
+        </div>
+    </div>
+
+    <!-- Mobile Tab Content Areas -->
+    <div class="mobile-content" id="mobile-content">
+        <!-- Home Tab Content -->
+        <div class="tab-content active" id="home-tab">
+            <div class="mobile-home-content">
+                <!-- This will contain the main content from the right div -->
+            </div>
+        </div>
+
+        <!-- Search Tab Content -->
+        <div class="tab-content" id="search-tab">
+            <div class="mobile-search-content">
+                <div class="search-input-container">
+                    <input type="text" placeholder="Search for songs, artists, albums..." class="mobile-search-input">
+                </div>
+                <div class="search-results" id="mobile-search-results">
+                    <!-- Search results will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Library Tab Content -->
+        <div class="tab-content" id="library-tab">
+            <div class="mobile-library-content">
+                <h2>Your Library</h2>
+                <div class="library-playlists">
+                    <!-- Playlist content from left sidebar will be moved here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Tab Content -->
+        <div class="tab-content" id="login-tab">
+            <div class="mobile-login-content">
+                <h2>Welcome Back</h2>
+                <div class="login-form">
+                    <input type="text" placeholder="Email or username" class="login-input">
+                    <input type="password" placeholder="Password" class="login-input">
+                    <button class="login-btn">Log In</button>
+                    <button class="signup-btn">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
