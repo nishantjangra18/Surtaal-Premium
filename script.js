@@ -321,22 +321,22 @@ async function main() {
       cover: "80's.jpg",
       songs: [
         {
-          src: "Songs/80's - 90's/Ruk Ja O Dil Deewane.mp3",
+          src: "Songs/old/Ruk Ja O Dil Deewane.mp3",
           cover: "Covers/ruk.jpg",
           singer: "Udit Narayan",
         },
         {
-          src: "Songs/80's - 90's/Dil Ne Yeh Kaha Hain Dil Se.mp3",
+          src: "Songs/old/Dil Ne Yeh Kaha Hain Dil Se.mp3",
           cover: "Covers/dil.jpg",
           singer: "Udit Narayan, Alka Yagnik",
         },
         {
-          src: "Songs/80's - 90's/Aankhein Khuli.mp3",
+          src: "Songs/old/Aankhein Khuli.mp3",
           cover: "Covers/aankhein.jpg",
           singer: "Lata Mangeshkar, Udit Narayan, Shweta Pandit",
         },
         {
-          src: "Songs/80's - 90's/O Meri Mehbooba.mp3",
+          src: "Songs/old/O Meri Mehbooba.mp3",
           cover: "Covers/o meri.jpg",
           singer: "Mohammed Rafi",
         },
@@ -1320,10 +1320,10 @@ function populateMobileLibrary() {
             type: "Playlist",
             image: "80's.jpg",
             songs: [
-                { title: 'Aankhein Khuli', artist: 'Various Artists', cover: 'Covers/aankhein.jpg', src: 'Songs/80\'s - 90\'s/Aankhein Khuli.mp3' },
-                { title: 'Dil Ne Yeh Kaha Hain Dil Se', artist: 'Various Artists', cover: 'Covers/dil.jpg', src: 'Songs/80\'s - 90\'s/Dil Ne Yeh Kaha Hain Dil Se.mp3' },
-                { title: 'O Meri Mehbooba', artist: 'Various Artists', cover: 'Covers/o meri.jpg', src: 'Songs/80\'s - 90\'s/O Meri Mehbooba.mp3' },
-                { title: 'Ruk Ja O Dil Deewane', artist: 'Various Artists', cover: 'Covers/ruk.jpg', src: 'Songs/80\'s - 90\'s/Ruk Ja O Dil Deewane.mp3' }
+                { title: 'Aankhein Khuli', artist: 'Various Artists', cover: 'Covers/aankhein.jpg', src: 'Songs/old/Aankhein Khuli.mp3' },
+                { title: 'Dil Ne Yeh Kaha Hain Dil Se', artist: 'Various Artists', cover: 'Covers/dil.jpg', src: 'Songs/old/Dil Ne Yeh Kaha Hain Dil Se.mp3' },
+                { title: 'O Meri Mehbooba', artist: 'Various Artists', cover: 'Covers/o meri.jpg', src: 'Songs/old/O Meri Mehbooba.mp3' },
+                { title: 'Ruk Ja O Dil Deewane', artist: 'Various Artists', cover: 'Covers/ruk.jpg', src: 'Songs/old/Ruk Ja O Dil Deewane.mp3' }
             ]
         },
         {
@@ -1801,16 +1801,16 @@ const allSongs = [
     { title: 'You\'re U Tho', artist: 'Various Artists', cover: 'popculture.jpg', src: 'Songs/P-POP CULTURE/You\'re U Tho.mp3' },
     
     // Ishq aur Tanhai Playlist
-    { title: 'Isq Risk', artist: 'Various Artists', cover: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9ae67d801ce4b277bc9a0160', src: 'Songs/Ishq aur Tanhai/Isq Risk.mp3' },
+    { title: 'Isq Risk', artist: 'Various Artists', cover: 'https://surtaalmusic.netlify.app/Covers/isq.jpg', src: 'Songs/Ishq aur Tanhai/Isq Risk.mp3' },
     { title: 'Maula Mere Maula', artist: 'Various Artists', cover: 'Covers/maula.jpg', src: 'Songs/Ishq aur Tanhai/Maula Mere Maula.mp3' },
     { title: 'O Re Piya', artist: 'Various Artists', cover: 'Covers/o re.jpg', src: 'Songs/Ishq aur Tanhai/O Re Piya.mp3' },
     { title: 'Phir Mohabbat', artist: 'Various Artists', cover: 'Covers/phir.jpg', src: 'Songs/Ishq aur Tanhai/Phir Mohabbat.mp3' },
     
     // 80's-90's Playlist
-    { title: 'Aankhein Khuli', artist: 'Various Artists', cover: 'Covers/aankhein.jpg', src: 'Songs/80\'s - 90\'s/Aankhein Khuli.mp3' },
-    { title: 'Dil Ne Yeh Kaha Hain Dil Se', artist: 'Various Artists', cover: 'Covers/dil.jpg', src: 'Songs/80\'s - 90\'s/Dil Ne Yeh Kaha Hain Dil Se.mp3' },
-    { title: 'O Meri Mehbooba', artist: 'Various Artists', cover: 'Covers/o meri.jpg', src: 'Songs/80\'s - 90\'s/O Meri Mehbooba.mp3' },
-    { title: 'Ruk Ja O Dil Deewane', artist: 'Various Artists', cover: 'Covers/ruk.jpg', src: 'Songs/80\'s - 90\'s/Ruk Ja O Dil Deewane.mp3' },
+    { title: 'Aankhein Khuli', artist: 'Various Artists', cover: 'Covers/aankhein.jpg', src: "Songs/old/Aankhein Khuli.mp3" },
+    { title: 'Dil Ne Yeh Kaha Hain Dil Se', artist: 'Various Artists', cover: 'Covers/dil.jpg', src: "Songs/old/Dil Ne Yeh Kaha Hain Dil Se.mp3" },
+    { title: 'O Meri Mehbooba', artist: 'Various Artists', cover: 'Covers/o meri.jpg', src: "Songs/old/O Meri Mehbooba.mp3" },
+    { title: 'Ruk Ja O Dil Deewane', artist: 'Various Artists', cover: 'Covers/ruk.jpg', src: "Songs/old/Ruk Ja O Dil Deewane.mp3" },
     
     // Punjabi Pump Playlist
     { title: '0008', artist: 'Various Artists', cover: 'Covers/0008.jpg', src: 'Songs/Punjabi Pump/0008.mp3' },
@@ -1826,10 +1826,10 @@ const allSongs = [
     { title: 'Saiyaara', artist: 'Various Artists', cover: 'Covers/saiyaara.jpg', src: 'Songs/Albums/Saiyaara/Saiyaara.mp3' },
     
     // Additional songs from other albums
-    { title: 'Aankhein Khuli', artist: 'Various Artists', cover: 'Covers/aankhein.jpg', src: 'Songs/80\'s - 90\'s/Aankhein Khuli.mp3' },
-    { title: 'Dil Ne Yeh Kaha Hain Dil Se', artist: 'Various Artists', cover: 'Covers/dil.jpg', src: 'Songs/80\'s - 90\'s/Dil Ne Yeh Kaha Hain Dil Se.mp3' },
-    { title: 'O Meri Mehbooba', artist: 'Various Artists', cover: 'Covers/o meri.jpg', src: 'Songs/80\'s - 90\'s/O Meri Mehbooba.mp3' },
-    { title: 'Ruk Ja O Dil Deewane', artist: 'Various Artists', cover: 'Covers/ruk.jpg', src: 'Songs/80\'s - 90\'s/Ruk Ja O Dil Deewane.mp3' }
+    { title: 'Aankhein Khuli', artist: 'Various Artists', cover: 'Covers/aankhein.jpg', src: "Songs/old/Aankhein Khuli.mp3" },
+    { title: 'Dil Ne Yeh Kaha Hain Dil Se', artist: 'Various Artists', cover: 'Covers/dil.jpg', src: "Songs/old/Dil Ne Yeh Kaha Hain Dil Se.mp3" },
+    { title: 'O Meri Mehbooba', artist: 'Various Artists', cover: 'Covers/o meri.jpg', src: "Songs/old/O Meri Mehbooba.mp3" },
+    { title: 'Ruk Ja O Dil Deewane', artist: 'Various Artists', cover: 'Covers/ruk.jpg', src: "Songs/old/Ruk Ja O Dil Deewane.mp3" }
 ];
 
 // Perform mobile search

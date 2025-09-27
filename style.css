@@ -781,7 +781,7 @@ input {
 }
 
 .back-btn {
-    background: #1DB954;
+    background: #ffaa00;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -792,7 +792,7 @@ input {
 }
 
 .back-btn:hover {
-    background: #18a148;
+    background: #ffaa00;
 }
 
 .album-header h1 {
@@ -933,7 +933,7 @@ input {
 .play-btn-large {
     width: 80px;
     height: 80px;
-    background: #1DB954;
+    background: #ffaa00;
     border: none;
     border-radius: 50%;
     color: white;
@@ -945,7 +945,7 @@ input {
 }
 
 .play-btn-large:hover {
-    background: #18a148;
+    background: #ffaa00;
     transform: scale(1.1);
 }
 
@@ -1121,12 +1121,12 @@ input {
 }
 
 .login-btn {
-    background: #1DB954;
+    background: #ffaa00;
     color: white;
 }
 
 .login-btn:hover {
-    background: #18a148;
+    background: #ffaa00;
 }
 
 .signup-btn {
@@ -1249,6 +1249,7 @@ input {
         align-items: center;
         flex: 1;
         min-width: 0;
+        padding-bottom: 8px;
     }
     
     .mobile-playbar .song-cover {
@@ -1262,6 +1263,7 @@ input {
     .mobile-playbar .song-details {
         flex: 1;
         min-width: 0;
+        padding-bottom: 5px;
     }
     
     .mobile-playbar .song-title {
@@ -1286,13 +1288,15 @@ input {
 .mobile-playbar .play-controls {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 3px;
+    padding-right: 60px;
+    padding-bottom: 6px;
 }
 
 .mobile-playbar .play-btn {
     width: 40px;
     height: 40px;
-    background: #1DB954;
+    background: #ff8c00;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -1319,6 +1323,7 @@ input {
     cursor: pointer;
     color: white;
     transition: all 0.3s ease;
+    padding-right: 10px;
 }
 
 .mobile-playbar .control-btn:hover {
