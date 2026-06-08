@@ -5221,7 +5221,7 @@ input {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   overscroll-behavior-x: contain;
-  touch-action: pan-x;
+  touch-action: pan-x pan-y;
 }
 
 .carousel-shell .cinema-card,
@@ -7027,7 +7027,6 @@ body.login-modal-blur .lm-modal * {
 @media (display-mode: standalone) {
   body {
     background: #0B0705;
-    overscroll-behavior-y: none;
   }
 }
 
@@ -7040,9 +7039,27 @@ body.login-modal-blur .lm-modal * {
     background: #0B0705;
   }
 
+  /* ── Mobile Scroll Fix ──
+     Remove overflow: hidden from the entire parent chain so touch
+     events propagate freely to the single scroll container (.main-content).
+     Desktop keeps its original overflow: hidden layout intact. */
   .App {
     min-height: 100dvh;
+    height: auto;
+    overflow: visible;
     overflow-x: hidden;
+  }
+
+  .app-shell {
+    overflow: visible;
+  }
+
+  .app-body {
+    overflow: visible;
+  }
+
+  .content-wrapper {
+    overflow: visible;
   }
 
   .app-shell,
@@ -7067,6 +7084,9 @@ body.login-modal-blur .lm-modal * {
 
   .main-content {
     padding: 0 14px 148px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    min-height: 0;
   }
 
   .mobile-taskbar {
