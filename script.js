@@ -373,6 +373,26 @@ async function main() {
   let currentSongIndex = 0;
   let audio = new Audio();
 
+  function formatTime(seconds) {
+    if(isNaN(seconds)) return "0:00";
+    let min = Math.floor(seconds / 60);
+    let sec = Math.floor(seconds % 60);
+    return min + ":" + (sec < 10 ? "0" : "") + sec;
+  }
+
+  audio.addEventListener("timeupdate", () => {
+    let currentTimeSpan = document.getElementById("current-time");
+    let totalTimeSpan = document.getElementById("total-time");
+    let seekBar = document.getElementById("seek-bar");
+    if(currentTimeSpan && totalTimeSpan && seekBar && !isNaN(audio.duration)) {
+      currentTimeSpan.innerText = formatTime(audio.currentTime);
+      totalTimeSpan.innerText = formatTime(audio.duration);
+      if(document.activeElement !== seekBar) {
+        seekBar.value = (audio.currentTime / audio.duration) * 100;
+      }
+    }
+  });
+
   function playSong(index) {
     if (!currentPlaylist || currentPlaylist.length === 0) return;
 
@@ -408,27 +428,32 @@ async function main() {
 
     // Update playbar UI
     document.querySelector(".playbar").innerHTML = `
-        <div style="display:flex; align-items:center; gap:15px; position:absolute; left:20px;">
-            <img src="${
-              song.cover
-            }" id="playbar-cover" cursor:pointer; height="50" style="border-radius:8px;">
-            <div>
+        <div style="display:flex; align-items:center; gap:15px; position:absolute; left:20px; max-width:25%;">
+            <img src="${song.cover}" id="playbar-cover" style="cursor:pointer; height:50px; border-radius:8px;">
+            <div style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
                 <p1 style="color:white; font-weight:bold; margin:0;">
-                    ${decodeURIComponent(
-                      song.src.split("/").pop().replace(".mp3", "")
-                    )}
+                    ${decodeURIComponent(song.src.split("/").pop().replace(".mp3", ""))}
                 </p1>
                 <p style="color:rgb(180,180,180); font-size:12px; margin:0;">
                     ${song.singer}
                 </p>
             </div>
         </div>
-        <div class="songbut" style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+        <div class="songbut" style="display:flex; flex-direction:column; align-items:center; gap:5px; flex:1;">
             <div style="display:flex; align-items:center;">
                 <img src="prev.png" id="prev" style="cursor:pointer">
                 <img src="pause.png" id="playpause" style="cursor:pointer">
                 <img src="next.png" id="next" style="cursor:pointer">
             </div>
+            <div style="display:flex; align-items:center; gap: 10px; width: 400px; font-size: 12px; color: #b3b3b3;">
+                <span id="current-time">0:00</span>
+                <input type="range" id="seek-bar" value="0" max="100" style="width: 100%; cursor: pointer;">
+                <span id="total-time">0:00</span>
+            </div>
+        </div>
+        <div style="position:absolute; right:20px; display:flex; align-items:center; gap:10px;">
+            <img src="play.png" height="20" style="filter: invert(1);" id="mute-btn" alt="Volume">
+            <input type="range" id="volume-bar" value="${audio.volume * 100}" max="100" style="cursor: pointer; width: 100px;">
         </div>
     `;
 
@@ -617,6 +642,22 @@ async function main() {
         currentPlaylist.length;
       playSong(currentSongIndex);
     });
+
+    let seekBar = document.getElementById("seek-bar");
+    if(seekBar) {
+      seekBar.addEventListener("input", (e) => {
+        if(!isNaN(audio.duration)) {
+          audio.currentTime = (e.target.value / 100) * audio.duration;
+        }
+      });
+    }
+
+    let volumeBar = document.getElementById("volume-bar");
+    if(volumeBar) {
+      volumeBar.addEventListener("input", (e) => {
+        audio.volume = e.target.value / 100;
+      });
+    }
   }
 
   // Attach click to playlists
@@ -657,6 +698,70 @@ async function main() {
       }
     }
   });
+
+  // Desktop Search Setup
+  const searchInput = document.querySelector('.search input[name="search"]');
+  const searchContainer = document.querySelector('.search');
+  if(searchInput && searchContainer) {
+    const suggestionsBox = document.createElement('div');
+    suggestionsBox.className = 'suggestions-box';
+    suggestionsBox.style.display = 'none';
+    suggestionsBox.style.position = 'absolute';
+    suggestionsBox.style.top = '100%';
+    suggestionsBox.style.left = '10px';
+    suggestionsBox.style.width = 'calc(100% - 20px)';
+    suggestionsBox.style.zIndex = '1000';
+    searchContainer.appendChild(suggestionsBox);
+
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+      if (query.length === 0) {
+        suggestionsBox.style.display = 'none';
+        return;
+      }
+      // using allSongs which is defined at the bottom
+      const results = allSongs.filter(song => 
+        song.title.toLowerCase().includes(query) || 
+        song.artist.toLowerCase().includes(query)
+      );
+
+      if (results.length === 0) {
+        suggestionsBox.innerHTML = '<div style="padding:10px; color:gray;">No results found</div>';
+      } else {
+        let resultsHTML = '';
+        results.forEach((song, idx) => {
+          resultsHTML += `
+            <div class="suggestion-item" data-idx="${idx}" style="display:flex; align-items:center; gap:10px; padding:10px; cursor:pointer;">
+              <img src="${song.cover}" style="height:40px; width:40px; border-radius:5px; object-fit:cover;">
+              <div>
+                <p style="margin:0; font-weight:bold; color:white; font-size:14px;">${song.title}</p>
+                <p style="margin:0; font-size:12px; color:gray;">${song.artist}</p>
+              </div>
+            </div>
+          `;
+        });
+        suggestionsBox.innerHTML = resultsHTML;
+
+        suggestionsBox.querySelectorAll('.suggestion-item').forEach(item => {
+          item.addEventListener('click', function() {
+            const songIdx = parseInt(this.getAttribute('data-idx'));
+            const song = results[songIdx];
+            currentPlaylist = [{ src: song.src, cover: song.cover, singer: song.artist }];
+            playSong(0);
+            suggestionsBox.style.display = 'none';
+            searchInput.value = '';
+          });
+        });
+      }
+      suggestionsBox.style.display = 'block';
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!searchContainer.contains(e.target)) {
+        suggestionsBox.style.display = 'none';
+      }
+    });
+  }
 
   // SurTaal logo click = home
   document.querySelector(".img img").addEventListener("click", () => {

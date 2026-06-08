@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">SURTAAL gold logo</title>
+  <desc id="desc">A premium gold Indian classical music mark inspired by a tanpura and tabla.</desc>
+  <defs>
+    <radialGradient id="goldCore" cx="34%" cy="18%" r="75%">
+      <stop offset="0%" stop-color="#fff4b8"/>
+      <stop offset="24%" stop-color="#ffd46f"/>
+      <stop offset="54%" stop-color="#b86820"/>
+      <stop offset="82%" stop-color="#5b2608"/>
+      <stop offset="100%" stop-color="#231005"/>
+    </radialGradient>
+    <linearGradient id="goldEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff6c4"/>
+      <stop offset="25%" stop-color="#f2a83d"/>
+      <stop offset="55%" stop-color="#6d2b09"/>
+      <stop offset="78%" stop-color="#f4bd59"/>
+      <stop offset="100%" stop-color="#fff0a8"/>
+    </linearGradient>
+    <linearGradient id="stemGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5b2207"/>
+      <stop offset="18%" stop-color="#f2a23a"/>
+      <stop offset="40%" stop-color="#fff0a6"/>
+      <stop offset="64%" stop-color="#b25a16"/>
+      <stop offset="100%" stop-color="#341405"/>
+    </linearGradient>
+    <filter id="warmGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#f29a27" flood-opacity="0.58"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.48"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ffb23d" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <path d="M146 225c-43-36-30-106 20-133 40-22 90-8 111 28 9 16 9 34 0 49-8 14-22 23-37 28 20-32 5-68-30-77-31-8-63 12-74 43-7 21-2 44 14 61 3 3 3 8 0 11-3 3-7 3-10 0Z" fill="url(#goldCore)" stroke="url(#goldEdge)" stroke-width="8" stroke-linejoin="round" filter="url(#warmGlow)"/>
+    <path d="M318 188c25 6 49 26 56 55 7 31-9 62-38 78-9 5-17-6-10-14 21-24 19-55-3-75-12-11-27-16-43-16-10 0-13-14-4-19 12-7 27-10 42-9Z" fill="url(#goldCore)" stroke="url(#goldEdge)" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M172 332c0-69 57-125 127-125s127 56 127 125-57 125-127 125-127-56-127-125Z" fill="url(#goldCore)" stroke="url(#goldEdge)" stroke-width="9"/>
+    <path d="M201 332c0-53 44-96 98-96s98 43 98 96-44 96-98 96-98-43-98-96Z" fill="none" stroke="#ffcf69" stroke-width="10" opacity="0.78"/>
+    <path d="M231 332c0-37 31-68 68-68s68 31 68 68-31 68-68 68-68-31-68-68Z" fill="none" stroke="#7d330d" stroke-width="9" opacity="0.9"/>
+    <path d="M255 332c0-24 20-44 44-44s44 20 44 44-20 44-44 44-44-20-44-44Z" fill="none" stroke="#ffe8a4" stroke-width="7" opacity="0.72"/>
+
+    <path d="M311 65c2-16 17-27 33-24 15 2 26 17 24 33l-49 282c-2 13-15 22-28 20-13-3-22-15-20-28Z" fill="url(#stemGold)" stroke="url(#goldEdge)" stroke-width="8" stroke-linejoin="round" filter="url(#warmGlow)"/>
+    <path d="M332 57l-48 297" fill="none" stroke="#fff2b1" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+    <path d="M304 71l-48 287" fill="none" stroke="#5c2107" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+
+    <g fill="url(#goldCore)" stroke="url(#goldEdge)" stroke-width="5">
+      <circle cx="360" cy="82" r="17"/>
+      <circle cx="389" cy="101" r="16"/>
+      <circle cx="354" cy="126" r="16"/>
+      <circle cx="389" cy="146" r="15"/>
+    </g>
+
+    <path d="M131 187c-43 9-73 35-80 73-5 30 5 59 28 82" fill="none" stroke="url(#goldEdge)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M421 159c35 5 56 26 61 57 4 25-4 49-22 68" fill="none" stroke="url(#goldEdge)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M173 197c13-8 25-18 34-31 7 15 17 26 31 34-15 8-26 19-34 34-7-15-18-26-31-34Z" fill="#ffd36e" stroke="#6b2708" stroke-width="5"/>
+  </g>
+</svg>

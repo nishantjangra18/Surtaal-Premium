@@ -1,0 +1,1559 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: roboto;
+
+}
+
+.homenav {
+    background-color: rgb(31, 31, 31);
+    border-radius: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Common wrapper */
+.sign {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    gap: 15px;
+    /* thoda gap dono ke beech */
+}
+
+/* Sign Up text */
+.signup {
+    color: rgb(212, 212, 212);
+    transition: all 0.2s ease-in-out;
+}
+
+.signup:hover {
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Log in button */
+.login button {
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 35px;
+    font-weight: bolder;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    /* 🔥 smoother transition sab property ke liye */
+}
+
+.login button:hover {
+    background-color: rgb(205, 205, 205);
+    transform: scale(1.05);
+    /* 🔥 thoda zoom effect */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    /* halka sa shadow */
+    cursor: pointer;
+}
+
+
+
+.nav {
+    width: 98vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: black;
+
+}
+
+.img {
+    padding-left: 30px;
+    width: 150px;
+    height: 60px;
+    align-items: center;
+    padding-top: 2px;
+}
+
+/* Lift the navbar logo slightly to avoid bottom clipping */
+.img img {
+    transform: none; /* Only adjust on mobile */
+}
+
+.search {
+    padding-left: 10px;
+
+}
+
+::placeholder {
+    color: rgb(172, 172, 172);
+    font-family: roboto;
+
+}
+
+input {
+    background-color: rgb(31, 31, 31);
+    padding: 15px 300px 15px 20px;
+    border-radius: 40px;
+    border: none;
+    color: white;
+
+}
+
+.homenav {
+    background-color: rgb(31, 31, 31);
+    border-radius: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    /* 🔥 smooth animation */
+}
+
+.homenav:hover {
+    transform: scale(1.1);
+    /* 🔥 div pura zoom ho jaaye */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    /* halki shadow for effect */
+    cursor: pointer;
+}
+
+
+
+
+.left {
+    width: 20vw;
+    height: 87vh;
+    color: white;
+    /* overflow-y: auto;
+    
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+    scrollbar-width: none; */
+
+}
+
+/* .left::-webkit-scrollbar {
+    display: none;
+    
+} */
+
+.right {
+    width: 80vw;
+    height: 87vh;
+    color: white;
+    overflow-y: auto;
+    /* sirf vertical scroll allow */
+    overflow-x: hidden;
+    /* position: relative; */
+    padding-bottom: 80px;
+    /* 🔥 playbar ke liye gap */
+    box-sizing: border-box;
+    /* padding ko height ke andar hi count karega */
+}
+
+.home {
+    /* background-color: rgb(31, 31, 31); */
+    border-radius: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addbut {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    background-color: #1F1F1F;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.playlist {
+    margin-top: 9px;
+    /* padding-left: 10px; */
+}
+
+.playhead {
+    padding-left: 40px;
+}
+
+/* Make section headings larger for better hierarchy */
+.playhead h1 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.card {
+    width: 200px;
+    /* border: 2px solid red; */
+    padding: 15px;
+    /* position: absolute; */
+
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+
+    object-fit: contain;
+}
+
+.card:hover {
+    background-color: #1F1F1F;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cardcontainer {
+    display: flex;
+    /* gap: 5px; */
+    flex-wrap: wrap;
+}
+
+.playbut {
+    display: none !important;
+}
+
+.playbar {
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    height: 30px;
+    margin: 0px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+
+
+.songbut img {
+    cursor: pointer;
+    height: 50px;
+
+}
+
+.addplaylists ul {
+    padding: 30px;
+}
+
+.addplaylists ul li {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.addplaylists ul li img {
+    border-radius: 8px;
+
+}
+
+.addplaylists ul li:hover {
+    background-color: #2A2A2A;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.active-playlist {
+    background-color: #2A2A2A;
+    /* Yeh wahi color hai jo hover pe hai */
+    border-radius: 10px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1a1a1a;
+    padding: 10px;
+    margin: 5px 20px;
+    border-radius: 8px;
+}
+
+.song-item:hover {
+    background-color: #2a2a2a;
+}
+
+.song-item button {
+    background: #1DB954;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.song-item button:hover {
+    background: #18a148;
+}
+
+
+.img img,
+.homenav img {
+    cursor: pointer;
+}
+
+
+
+.playlist-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 40px;
+}
+
+.playlist-cover {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.playlist-info h1 {
+    color: white;
+    font-size: 40px;
+    margin: 0;
+}
+
+.playlist-info p {
+    color: gray;
+    margin: 2px 0;
+}
+
+.playlist-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 40px;
+}
+
+.song-item img.play-song {
+    transition: transform 0.2s ease-in-out;
+}
+
+.song-item img.play-song:hover {
+    transform: scale(1.1);
+}
+
+.song-item.active {
+    background-color: #2a2a2a;
+}
+
+.equalizer {
+    display: flex;
+    gap: 2px;
+    height: 20px;
+    align-items: flex-end;
+    padding-right: 12px;
+}
+
+.equalizer span {
+    display: block;
+    width: 3px;
+    background: orange;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+.equalizer span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.equalizer span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.equalizer span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        height: 4px;
+    }
+
+    50% {
+        height: 16px;
+    }
+}
+
+.now-playing {
+    background: transparent;
+    /* default */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+}
+
+
+.now-playing-cover {
+    width: 350px;
+    height: 350px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    align-items: center;
+}
+
+.now-playing-controls img {
+    height: 50px;
+    cursor: pointer;
+    margin: 0 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.now-playing-controls img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.now-playing h2 {
+    font-size: 80px;
+    /* 🔥 bada title */
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-shadow: 5px 5px 10px #333;
+}
+
+.now-playing p {
+    font-size: 25px;
+    /* 🔥 singer bhi readable */
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    text-shadow: 5px 5px 10px #333;
+}
+
+.search {
+    position: relative;
+
+}
+
+.search-results {
+    padding: 20px;
+}
+
+.search-results .cardcontainer {
+    justify-content: flex-start;
+    /* left aligned */
+    gap: 15px;
+}
+
+.search-results h1 {
+    padding-left: 10px;
+}
+
+/* 🔥 Suggestions dropdown */
+.suggestions-box {
+    position: absolute;
+    top: 100%;
+    /* input ke niche hi */
+    left: 0;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+    max-height: 250px;
+
+}
+
+.suggestions-box div {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.suggestions-box div:hover {
+    background: #2a2a2a;
+}
+
+.suggestions-box {
+    position: absolute;
+    top: 100%;
+    /* input ke bilkul niche */
+    left: 0;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+    max-height: 250px;
+
+}
+
+
+.suggestions-box div {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.suggestions-box div:hover {
+    background: #2a2a2a;
+}
+
+/* ===== HAMBURGER MENU STYLES ===== */
+
+/* Hamburger menu icon */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Hamburger animation */
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Close button for mobile sidebar */
+.close-sidebar {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    z-index: 1002;
+    background: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Mobile sidebar overlay */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* ===== MOBILE TASKBAR STYLES ===== */
+
+/* Mobile Bottom Taskbar - Hidden by default */
+.mobile-taskbar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #121212;
+    border-top: 1px solid #333;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+/* Mobile Playbar - Hidden by default */
+.mobile-playbar {
+    display: none;
+}
+
+.taskbar-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    min-width: 60px;
+    color: #9e9e9e; /* inactive gray similar to Spotify */
+}
+
+.taskbar-tab.active {
+    background: transparent; /* no background for active */
+    color: #ffffff; /* active white */
+}
+
+.taskbar-tab:hover {
+    background: transparent; /* keep clean look */
+    color: #ffffff; /* brighten on hover */
+}
+
+.taskbar-tab:hover .tab-icon svg {
+    transform: scale(1.1);
+}
+
+.tab-icon {
+    font-size: 20px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;   /* expand container to fit bigger svg */
+    height: 30px;
+}
+
+.tab-icon svg {
+    width: 30px;  /* bigger icons as requested */
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Show labels under icons in the taskbar */
+.tab-label {
+    display: block;
+    margin-top: 3px;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1;
+    color: inherit; /* follow active/inactive color */
+}
+
+/* Mobile Content Areas */
+.mobile-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #121212;
+    overflow-y: auto;
+    z-index: 998;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Mobile Home Content */
+.mobile-home-content {
+    padding: 20px 0;
+}
+
+.mobile-home-content .playlist {
+    margin-top: 0;
+}
+
+.mobile-home-content .playhead {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mobile-home-content .cardcontainer {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.mobile-home-content .cardcontainer::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-home-content .card {
+    min-width: 150px;
+    flex-shrink: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.mobile-home-content .card:hover {
+    transform: scale(1.05);
+}
+
+.mobile-home-content .card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Side scroll indicators */
+.scroll-container {
+    position: relative;
+}
+
+.scroll-indicator {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-container:hover .scroll-indicator {
+    opacity: 1;
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+/* Mobile Album View */
+.mobile-album-view {
+    padding: 20px;
+}
+
+.album-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.back-btn {
+    background: #ffaa00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #ffaa00;
+}
+
+.album-header h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+.album-songs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.song-item:hover {
+    background: #2a2a2a;
+}
+
+.song-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.song-info h3 {
+    color: white;
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.song-info p {
+    color: #b3b3b3;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Full-screen Player */
+.fullscreen-player {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.fullscreen-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.close-fullscreen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullscreen-cover {
+    margin: 40px 0;
+}
+
+.fullscreen-cover img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+.fullscreen-info h1 {
+    font-size: 32px;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+}
+
+.fullscreen-info p {
+    font-size: 18px;
+    color: #b3b3b3;
+    margin: 0 0 40px 0;
+}
+
+.fullscreen-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.play-btn-large {
+    width: 80px;
+    height: 80px;
+    background: #ffaa00;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.play-btn-large:hover {
+    background: #ffaa00;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile Search Content */
+.mobile-search-content {
+    padding: 20px 0;
+}
+
+.search-input-container {
+    margin-bottom: 20px;
+}
+
+.mobile-search-input {
+    width: 100%;
+    padding: 15px 20px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.mobile-search-input::placeholder {
+    color: #b3b3b3;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-result-item:hover {
+    background: #2a2a2a;
+}
+
+.search-result-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.search-result-info h4 {
+    color: white;
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.search-result-info p {
+    color: #b3b3b3;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Mobile Library Content */
+.mobile-library-content {
+    padding: 20px 0;
+}
+
+.mobile-library-content h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.library-playlists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.library-playlist-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.library-playlist-item:hover {
+    background: #2a2a2a;
+}
+
+.library-playlist-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.library-playlist-info h3 {
+    color: white;
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.library-playlist-info p {
+    color: #b3b3b3;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Mobile Login Content */
+.mobile-login-content {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.mobile-login-content h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 15px 20px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login-input::placeholder {
+    color: #b3b3b3;
+}
+
+.login-btn, .signup-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    background: #ffaa00;
+    color: white;
+}
+
+.login-btn:hover {
+    background: #ffaa00;
+}
+
+.signup-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid #333;
+}
+
+.signup-btn:hover {
+    background: #2a2a2a;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet styles (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .nav {
+        width: 100vw;
+        padding: 0 10px;
+    }
+    
+    .search input {
+        padding: 15px 200px 15px 20px;
+    }
+    
+    .left {
+        width: 25vw;
+    }
+    
+    .right {
+        width: 75vw;
+    }
+    
+    .card {
+        width: 180px;
+    }
+    
+    .cardcontainer {
+        gap: 10px;
+    }
+}
+
+/* Mobile styles (up to 768px) */
+@media (max-width: 768px) {
+    /* Show mobile taskbar */
+    .mobile-taskbar {
+        display: flex;
+    }
+    
+    /* Show mobile playbar */
+    .mobile-playbar {
+        display: flex;
+    }
+    
+    /* Show mobile content */
+    .mobile-content {
+        display: block;
+    }
+    
+    /* Hide desktop navbar elements on mobile */
+    .hamburger-menu,
+    .search,
+    .sign {
+        display: none;
+    }
+    
+    /* Keep only logo in navbar - left aligned */
+    .nav {
+        width: 100vw;
+        height: 70px; /* increased navbar height */
+        padding: 10px;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+    }
+    
+    .img {
+        width: auto;
+        padding-left: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+    }
+    
+    .img img {
+        height: 50px;
+        width: auto;
+        max-width: 200px;
+        object-fit: contain;
+        transform: translateY(-15px); /* nudge up more to prevent cutting */
+    }
+    
+    /* Show the sidebar close cross only on mobile */
+    .close-sidebar {
+        display: flex;
+    }
+    
+    /* Hide desktop layout on mobile */
+    .conatianer.flex {
+        display: none;
+    }
+    
+    /* Mobile playbar - above taskbar */
+    .mobile-playbar {
+        display: flex;
+        position: fixed;
+        bottom: 70px;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: #1a1a1a;
+        border-top: 1px solid #333;
+        align-items: center;
+        padding: 0 15px;
+        z-index: 999;
+    }
+    
+    .mobile-playbar .song-info {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        min-width: 0;
+        padding-bottom: 8px;
+    }
+    
+    .mobile-playbar .song-cover {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        margin-right: 10px;
+        background: #333;
+    }
+    
+    .mobile-playbar .song-details {
+        flex: 1;
+        min-width: 0;
+        padding-bottom: 5px;
+    }
+    
+    .mobile-playbar .song-title {
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .mobile-playbar .song-artist {
+        color: #b3b3b3;
+        font-size: 12px;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+.mobile-playbar .play-controls {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding-right: 60px;
+    padding-bottom: 6px;
+}
+
+.mobile-playbar .play-btn {
+    width: 40px;
+    height: 40px;
+    background: #ff8c00;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-playbar .play-btn:hover {
+    background: #18a148;
+    transform: scale(1.1);
+}
+
+.mobile-playbar .control-btn {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    padding-right: 10px;
+}
+
+.mobile-playbar .control-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.mobile-playbar .play-btn svg,
+.mobile-playbar .control-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.mobile-playbar .song-cover img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+    
+    /* Hide desktop playbar on mobile */
+    .playbar {
+        display: none;
+    }
+    
+    /* Adjust body for mobile taskbar and playbar */
+    body {
+        padding-bottom: 130px; /* 70px taskbar + 60px playbar */
+    }
+    
+    /* Sidebar adjustments */
+    .addbut {
+        margin-top: 20px;
+        padding: 8px;
+    }
+    
+    .addplaylists ul {
+        padding: 15px;
+    }
+    
+    .addplaylists ul li {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    /* Cards responsive grid */
+    .cardcontainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 0 20px;
+    }
+    
+    /* Spotify-like horizontal rows in Mobile Home */
+    .mobile-home-content .cardcontainer {
+        display: flex !important;
+        gap: 15px;
+        padding: 0 20px;
+        width: max-content; /* allow content to exceed wrapper width */
+    }
+    
+    /* Make the scroll wrapper scrollable horizontally */
+    .scroll-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 2px; /* avoid clipping shadows */
+    }
+
+    .playhead {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .playhead h1 {
+        font-size: 28px; /* larger on mobile for prominence */
+    }
+    
+    /* Playbar adjustments */
+    .playbar {
+        height: auto;
+        padding: 15px;
+    }
+    
+    .songbut img {
+        height: 40px;
+    }
+    
+    /* Now playing adjustments */
+    .now-playing h2 {
+        font-size: 40px;
+    }
+    
+    .now-playing p {
+        font-size: 18px;
+    }
+    
+    .now-playing-cover {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .now-playing-controls img {
+        height: 40px;
+        margin: 0 10px;
+    }
+}
+
+/* Small fixes within the existing Mobile (<=768px) media query to prevent double scrollbars */
+@media (max-width: 768px) {
+    /* Prevent body from creating its own scrollbar on mobile */
+    html, body {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /* We will manage spacing with the mobile content height instead */
+    body {
+        padding-bottom: 0 !important;
+    }
+
+    /* Make only the mobile content area scrollable and account for navbar + playbar + taskbar */
+    .mobile-content {
+        top: 70px; /* navbar height */
+        height: calc(100vh - 70px - 130px); /* full height minus navbar (70) and both bars (130) */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px; /* avoid clipping shadows */
+    }
+
+    /* Prevent nested scroll inside tab-content to avoid double scrollbars */
+    .tab-content {
+        height: auto;
+        min-height: unset;
+        overflow: visible; /* let parent .mobile-content own the scroll */
+    }
+
+    /* Hide scrollbars while keeping scroll behavior */
+    .mobile-content, .tab-content {
+        scrollbar-width: none;       /* Firefox */
+        -ms-overflow-style: none;    /* IE/Edge */
+    }
+    .mobile-content::-webkit-scrollbar,
+    .tab-content::-webkit-scrollbar {
+        display: none;               /* Chrome/Safari */
+    }
+}
+
+/* Small mobile styles (up to 480px) */
+@media (max-width: 480px) {
+    .nav {
+        padding: 5px;
+    }
+    
+    .img {
+        width: 100px;
+    }
+    
+    .search input {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .signup {
+        font-size: 12px;
+    }
+    
+    .login button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .cardcontainer {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+        padding: 0 10px;
+    }
+    
+    .card {
+        padding: 8px;
+    }
+    
+    .playhead h1 {
+        font-size: 24px; /* small mobile still clear and larger */
+    }
+    
+    .playbar {
+        padding: 10px;
+    }
+    
+    .songbut img {
+        height: 35px;
+    }
+    
+    .now-playing h2 {
+        font-size: 30px;
+    }
+    
+    .now-playing p {
+        font-size: 16px;
+    }
+    
+    .now-playing-cover {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .now-playing-controls img {
+        height: 35px;
+        margin: 0 8px;
+    }
+}

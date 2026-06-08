@@ -1,0 +1,25 @@
+{
+  "name": "SurTaal",
+  "short_name": "SurTaal",
+  "description": "SurTaal - Suron Ka Safar, Taal Ke Saath.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#D89B52",
+  "background_color": "#0B0705",
+  "icons": [
+    {
+      "src": "/surtaal-gold-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/image-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+.border{
+    /* border: 2px solid red; */
+    margin: 3px;
+    background-color: #121212;
+    border-radius: 20px;
+    
+    
+}
+
+
+.flex{
+    display: flex;
+    gap: 5px;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    font-size: small;
+}
+
+p2{
+  font-size: small;
+  color: #cfcfcf;
+}
+
+h3{
+    margin: 0;
+    padding: 0;
+}
+
+/* Works on Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;              /* scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;      /* track (background of scrollbar) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;         /* thumb color */
+  border-radius: 10px;      /* rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;         /* hover effect */
+}
+
+
+/* * {
+  scrollbar-width: thin;            
+  scrollbar-color: #333 #121212;    
+} */
+
+::-webkit-scrollbar-button {
+  display: none;
+}

@@ -1,0 +1,210 @@
+/* ============================================================
+   SURTAAL — Indian Luxury Music Experience
+   "Suron Ka Safar, Taal Ke Saath"
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  caret-color: transparent;
+}
+
+:root {
+  /* ── Warm Indian Luxury Palette (SurTaal Signature) ── */
+  --bg-deep:        #000000;
+  --bg-base:        #080808;
+  --bg-elevated:    #111111;
+  --bg-surface:     #1c1c1c;
+  --bg-highlight:   #2d251e;
+  --bg-card:        rgba(18, 18, 18, 0.75);
+  --bg-card-hover:  rgba(32, 28, 24, 0.85);
+  --bg-glass:       rgba(8, 8, 8, 0.75);
+  --bg-glass-border: rgba(212, 161, 93, 0.18);
+
+  /* ── Accent — Per Spec ── */
+  --amber:          #D4A15D;
+  --amber-light:    #F3C78B;
+  --amber-glow:     rgba(212, 161, 93, 0.3);
+  --copper:         #8C5A2B;
+  --gold:           #D4A15D;
+  --gold-muted:     #9B703C;
+  --bronze:         #8A602F;
+  --sandalwood:     #b38854;
+
+  /* ── Text — Warm Whites ── */
+  --text-warm-white: #fdfbf7;
+  --text-cream:      #f1e5d3;
+  --text-muted:      #b3a495;
+  --text-dim:        #7e6e5f;
+  --text-subdued:    #5e5143;
+  --text-secondary:  #d3c5b5;
+
+  /* ── Decorative ── */
+  --sitar-string:    rgba(212, 161, 93, 0.08);
+  --mandala-glow:    rgba(224, 176, 109, 0.03);
+  --stage-light:     radial-gradient(ellipse at 50% 0%, rgba(212, 161, 93, 0.08) 0%, transparent 70%);
+
+  /* ── Shadows ── */
+  --shadow-ambient:  0 8px 32px rgba(0, 0, 0, 0.85);
+  --shadow-card:     0 4px 24px rgba(0, 0, 0, 0.75);
+  --shadow-glow:     0 0 25px rgba(212, 161, 93, 0.2);
+  --shadow-deep:     0 16px 64px rgba(0, 0, 0, 0.95);
+  --shadow-amber:    0 0 20px rgba(212, 161, 93, 0.25);
+
+  /* ── Typography ── */
+  --font-display:  'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif;
+  --font-body:     'Inter', system-ui, -apple-system, sans-serif;
+  --font-elegant:  'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ── Layout ── */
+  --sidebar-width:    230px;
+  --right-sidebar-width: 260px;
+  --navbar-height:    58px;
+  --playbar-height:   90px;
+
+  /* ── Motion ── */
+  --ease-silk:     cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-luxury:   cubic-bezier(0.16, 1, 0.3, 1);
+  --speed-fast:    0.2s;
+  --speed-medium:  0.4s;
+  --speed-slow:    0.7s;
+
+  /* ── Radius ── */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --r-2xl: 28px;
+  --r-full: 9999px;
+
+  --slider-active: #fff;
+  
+  /* ── Custom Theme Helpers ── */
+  --nav-item-hover: rgba(212, 161, 93, 0.08);
+  --nav-item-active: linear-gradient(135deg, rgba(212, 161, 93, 0.16), rgba(140, 90, 43, 0.1));
+  --playlist-item-hover: rgba(212, 161, 93, 0.06);
+  --playlist-item-active: rgba(212, 161, 93, 0.1);
+}
+
+html, body { height: 100%; overflow: hidden; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-deep);
+  color: var(--text-warm-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%; max-width: 100%; margin: 0;
+  text-align: left; border: none;
+  min-height: 100vh; display: flex; flex-direction: column;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: var(--font-body); cursor: pointer; border: none; outline: none; background: none; }
+input { font-family: var(--font-body); outline: none; }
+input,
+textarea,
+[contenteditable="true"] {
+  user-select: text;
+  cursor: text;
+}
+
+input:focus,
+textarea:focus,
+[contenteditable="true"]:focus {
+  caret-color: auto;
+}
+
+button,
+a,
+[role="button"],
+.App,
+.app-shell,
+.app-body,
+.content-wrapper,
+.main-content,
+.sidebar,
+.navbar,
+.playbar,
+.mobile-playbar,
+.mobile-taskbar {
+  caret-color: transparent;
+}
+img { display: block; max-width: 100%; }
+ul, ol { list-style: none; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb, rgba(212, 161, 93, 0.18)); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover, rgba(212, 161, 93, 0.3)); }
+* { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb, rgba(212, 161, 93, 0.18)) transparent; }
+
+/* ============================================================
+   SURTAAL THEMES — Dynamic Variant Overrides
+   ============================================================ */
+
+/* 1. SurTaal Signature Theme (Default luxury black + gold) */
+[data-theme-variant="SurTaal Signature"] {
+  --scrollbar-thumb: rgba(212, 161, 93, 0.25);
+  --scrollbar-thumb-hover: rgba(212, 161, 93, 0.45);
+  --bg-playbar: rgba(6, 6, 6, 0.97);
+  --border-playbar: rgba(212, 161, 93, 0.22);
+  --bg-modal-gradient: linear-gradient(160deg, #111111 0%, #000000 100%);
+}
+
+/* 2. Obsidian Theme (Apple Music Dark style) */
+[data-theme-variant="Obsidian"] {
+  --bg-deep:        #000000;
+  --bg-base:        #000000;
+  --bg-elevated:    #0a0a0a;
+  --bg-surface:     #121212;
+  --bg-highlight:   #1d1d1f;
+  --bg-card:        rgba(18, 18, 18, 0.8);
+  --bg-card-hover:  rgba(28, 28, 30, 0.95);
+  --bg-glass:       rgba(5, 5, 5, 0.88);
+  --bg-glass-border: rgba(255, 255, 255, 0.08);
+
+  --text-warm-white: #ffffff;
+  --text-cream:      #f5f5f7;
+  --text-muted:      #8e8e93;
+  --text-dim:        #48484a;
+  --text-subdued:    #3a3a3c;
+  --text-secondary:  #aeaeb2;
+
+  --amber:          #ffffff;
+  --amber-light:    #f5f5f7;
+  --amber-glow:     rgba(255, 255, 255, 0.12);
+  --gold:           #ffffff;
+  --gold-muted:     #8e8e93;
+  --bronze:         #aeaeb2;
+  --sandalwood:     #c7c7cc;
+
+  --scrollbar-thumb: rgba(255, 255, 255, 0.15);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.3);
+  --bg-playbar:     rgba(0, 0, 0, 0.96);
+  --border-playbar: rgba(255, 255, 255, 0.08);
+  --bg-modal-gradient: linear-gradient(180deg, #0f0f0f 0%, #000000 100%);
+  --shadow-glow:     0 0 10px rgba(255, 255, 255, 0.05);
+  --shadow-amber:    none;
+  --shadow-ambient:  0 8px 32px rgba(0, 0, 0, 0.95);
+  --shadow-card:     0 4px 24px rgba(0, 0, 0, 0.85);
+  --shadow-deep:     0 16px 64px rgba(0, 0, 0, 1);
+  --sitar-string:    rgba(255, 255, 255, 0.04);
+  --mandala-glow:    rgba(255, 255, 255, 0.01);
+  --stage-light:     radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+
+  --nav-item-hover: rgba(255, 255, 255, 0.06);
+  --nav-item-active: rgba(255, 255, 255, 0.12);
+  --playlist-item-hover: rgba(255, 255, 255, 0.05);
+  --playlist-item-active: rgba(255, 255, 255, 0.08);
+}
+
+
+::selection { background: var(--amber-glow, rgba(212, 161, 93, 0.3)); color: var(--text-warm-white); }
